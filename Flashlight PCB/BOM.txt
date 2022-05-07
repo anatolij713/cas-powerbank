@@ -1,4 +1,5 @@
 C1, C2  SMD 0805 capacitors             330nF .. 1uF, 50V
 D1      SMD SMA Package Shottkey Diode  SS14 or another
 L1      THT Inductor, min 300mA         68uH, for example, Bourns RLB0914-680KL
+R1      THT Resistor                    about 0.47..0.51 Ohms
 U1      Led Driver IC                   PT4115
