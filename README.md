@@ -10,3 +10,4 @@
 - 2 Springs about 6mm length and 4..6mm diameter
 - 2 male Crimp Terminals 6.35x0.8mm
 - Wires
+- Some Glue:)
