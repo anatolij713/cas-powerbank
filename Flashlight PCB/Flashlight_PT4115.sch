@@ -1,0 +1,225 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_LED:PT4115 U1
+U 1 1 6244EBD5
+P 6900 3200
+F 0 "U1" H 8228 2796 50  0000 L CNN
+F 1 "PT4115" H 8228 2705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-5" H 8250 3050 50  0001 C CNN
+F 3 "" H 8250 3050 50  0001 C CNN
+	1    6900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6244FB77
+P 7800 4150
+F 0 "#PWR03" H 7800 3900 50  0001 C CNN
+F 1 "GND" H 7805 3977 50  0000 C CNN
+F 2 "" H 7800 4150 50  0001 C CNN
+F 3 "" H 7800 4150 50  0001 C CNN
+	1    7800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 62450CD9
+P 7950 4150
+F 0 "#PWR04" H 7950 3900 50  0001 C CNN
+F 1 "GND" H 7955 3977 50  0000 C CNN
+F 2 "" H 7950 4150 50  0001 C CNN
+F 3 "" H 7950 4150 50  0001 C CNN
+	1    7950 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 62451474
+P 8050 2850
+F 0 "L1" H 8103 2896 50  0000 L CNN
+F 1 "68uH" H 8103 2805 50  0000 L CNN
+F 2 "Inductor_THT:L_Radial_D8.7mm_P5.00mm_Fastron_07HCP" H 8050 2850 50  0001 C CNN
+F 3 "~" H 8050 2850 50  0001 C CNN
+	1    8050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 624525BD
+P 7800 3100
+F 0 "D1" H 7650 3300 50  0000 C CNN
+F 1 "D_Schottky" H 7800 3226 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 7800 3100 50  0001 C CNN
+F 3 "~" H 7800 3100 50  0001 C CNN
+	1    7800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3300 8050 3100
+Wire Wire Line
+	7950 3100 8050 3100
+Connection ~ 8050 3100
+Wire Wire Line
+	8050 3100 8050 3000
+Wire Wire Line
+	7550 3300 7550 3100
+Wire Wire Line
+	7550 3100 7650 3100
+$Comp
+L Device:R R1
+U 1 1 62455009
+P 7550 2200
+F 0 "R1" V 7343 2200 50  0000 C CNN
+F 1 "0.47R*" V 7434 2200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7480 2200 50  0001 C CNN
+F 3 "~" H 7550 2200 50  0001 C CNN
+	1    7550 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 624576F7
+P 8500 2650
+F 0 "J4" H 8580 2692 50  0000 L CNN
+F 1 "L-" H 8580 2601 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 8500 2650 50  0001 C CNN
+F 3 "~" H 8500 2650 50  0001 C CNN
+	1    8500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 6245845D
+P 8500 2200
+F 0 "J3" H 8580 2242 50  0000 L CNN
+F 1 "L+" H 8580 2151 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 8500 2200 50  0001 C CNN
+F 3 "~" H 8500 2200 50  0001 C CNN
+	1    8500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2700 8050 2650
+Wire Wire Line
+	7200 2400 7200 2200
+Connection ~ 7550 3100
+$Comp
+L Device:C C1
+U 1 1 6245B071
+P 8050 2400
+F 0 "C1" H 8165 2446 50  0000 L CNN
+F 1 "330n" H 8165 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8088 2250 50  0001 C CNN
+F 3 "~" H 8050 2400 50  0001 C CNN
+	1    8050 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2200 7800 2200
+Wire Wire Line
+	7550 2400 7550 3100
+Wire Wire Line
+	7800 3300 7800 2200
+Wire Wire Line
+	7800 4000 7800 4150
+Wire Wire Line
+	7950 4000 7950 4150
+$Comp
+L power:GND #PWR01
+U 1 1 624A7EA6
+P 6800 2550
+F 0 "#PWR01" H 6800 2300 50  0001 C CNN
+F 1 "GND" H 6805 2377 50  0000 C CNN
+F 2 "" H 6800 2550 50  0001 C CNN
+F 3 "" H 6800 2550 50  0001 C CNN
+	1    6800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2450 6800 2550
+Wire Wire Line
+	6800 2450 6700 2450
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 624A2FDA
+P 6500 2450
+F 0 "J2" H 6600 2400 50  0000 L CNN
+F 1 "Bat-" H 6600 2500 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 6500 2450 50  0001 C CNN
+F 3 "~" H 6500 2450 50  0001 C CNN
+	1    6500 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 624A2FF0
+P 6500 2200
+F 0 "J1" H 6600 2150 50  0000 L CNN
+F 1 "Bat+" H 6600 2250 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm" H 6500 2200 50  0001 C CNN
+F 3 "~" H 6500 2200 50  0001 C CNN
+	1    6500 2200
+	-1   0    0    1   
+$EndComp
+Connection ~ 7800 2200
+Wire Wire Line
+	8050 2250 8050 2200
+Connection ~ 8050 2200
+Wire Wire Line
+	8050 2200 8300 2200
+Wire Wire Line
+	8050 2550 8050 2650
+Wire Wire Line
+	8050 2650 8300 2650
+Connection ~ 8050 2650
+Wire Wire Line
+	7800 2200 8050 2200
+$Comp
+L Device:C C2
+U 1 1 6266F33A
+P 7200 2650
+F 0 "C2" H 7315 2696 50  0000 L CNN
+F 1 "330n" H 7315 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7238 2500 50  0001 C CNN
+F 3 "~" H 7200 2650 50  0001 C CNN
+	1    7200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 62670CDE
+P 7200 2900
+F 0 "#PWR0101" H 7200 2650 50  0001 C CNN
+F 1 "GND" H 7205 2727 50  0000 C CNN
+F 2 "" H 7200 2900 50  0001 C CNN
+F 3 "" H 7200 2900 50  0001 C CNN
+	1    7200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2800 7200 2900
+Wire Wire Line
+	7200 2500 7200 2400
+Connection ~ 7200 2400
+Wire Wire Line
+	7200 2400 7550 2400
+Wire Wire Line
+	7200 2200 7400 2200
+Wire Wire Line
+	6700 2200 7200 2200
+Connection ~ 7200 2200
+$EndSCHEMATC
